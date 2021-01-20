@@ -1,0 +1,4 @@
+{
+  "name1": { "url": "https://www.example.com", "log": "./logs/access-log1.log" },
+  "name2": { "url": "https://www2.example.com", "log": "./logs/access-log2.log" }
+}

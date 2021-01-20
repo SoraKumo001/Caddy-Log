@@ -1,0 +1,5 @@
+*.log
+node_modules
+.next
+docker/settings/main.json
+.env-deploy

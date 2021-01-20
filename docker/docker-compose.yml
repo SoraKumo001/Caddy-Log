@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  node:
+    container_name: caddy-log
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - /var/log:/var/log
+    restart: always    
+    networks:
+      - default
+      - shared-network
+networks:
+  shared-network:
+    external: true

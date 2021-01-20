@@ -9,4 +9,7 @@ export const Root = styled.div`
     flex: 1;
     overflow: auto;
   }
+  .action {
+    display: flex;
+  }
 `;

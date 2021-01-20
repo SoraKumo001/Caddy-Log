@@ -68,7 +68,7 @@ export const LogNameList: FC<Props> = () => {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell>{format(new Date(row.time), 'yyyy/MM/dd hh:mm:ss')}</StyledTableCell>
+              <StyledTableCell>{format(new Date(row.time), 'yyyy/MM/dd HH:mm:ss')}</StyledTableCell>
               <StyledTableCell align="right">
                 {Math.ceil(row.size / 1024).toLocaleString()} KB
               </StyledTableCell>

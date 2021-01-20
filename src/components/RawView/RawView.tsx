@@ -24,7 +24,7 @@ export const RawView: FC<Props> = ({ logs }) => {
             <div key={index} className={`log${value.level === 'error' ? ' error' : ''}`}>
               <div className="level">{value.level}</div>
               <div className="date">
-                {format(new Date(value.ts * 1000), 'yyyy/MM/dd hh:mm:ss', {
+                {format(new Date(value.ts * 1000), 'yyyy/MM/dd HH:mm:ss', {
                   locale: ja,
                 })}
               </div>

@@ -1,7 +1,7 @@
 import { LinearProgress } from '@material-ui/core';
 import React, { FC } from 'react';
+import { RankingResultType } from '../../libs/getRanking';
 import { Root } from './RankingView.styled';
-import { RankingResultType } from '../../libs/readLogData';
 
 type Props = { data?: RankingResultType };
 

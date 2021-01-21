@@ -1,8 +1,8 @@
 import { NextApiHandler } from 'next';
-import { readLogData } from '../../../../../libs/readLogData';
+import { getLogData } from '../../../../../libs/getLogData';
 
 const index: NextApiHandler = async (req, res) => {
-  const values = await readLogData(req.query['id'] as string, 1000, Number(req.query['page']));
+  const values = await getLogData(req.query['id'] as string, 1000, Number(req.query['page']));
 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'application/json');

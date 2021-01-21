@@ -1,9 +1,9 @@
-import React from "react";
-import { RankingView } from ".";
-import { Decorator } from "../../storybook";
+import React from 'react';
+import { RankingView } from '.';
+import { Decorator } from '../../storybook';
 
 export default {
-  title: "Components/RankingView",
+  title: 'Components/RankingView',
   decorators: [Decorator],
   component: RankingView,
 };
@@ -14,5 +14,5 @@ export const Primary = (args: Parameters<typeof RankingView>[0]) => (
   </>
 );
 Primary.parameters = {
-  viewMode: "docs",
+  viewMode: 'docs',
 };

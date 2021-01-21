@@ -11,7 +11,7 @@ import { RankingResultType } from '../../../../libs/getRanking';
 const Page = () => {
   const router = useRouter();
   const { id, page } = router.query as { id: string; page: string };
-  const { data, dispatch } = useFetch<RankingResultType>(`/api/logs/${id}/ranking/${page}`);
+  const { data, dispatch } = useFetch<RankingResultType>(`/api/logs/${id}/referer/${page}`);
   const [allCount, setAllCount] = useState(data?.allCount || 0);
   useEffect(() => {
     if (data?.allCount) {
@@ -27,7 +27,7 @@ const Page = () => {
         <Pager allCount={allCount} page={Number(page)} />
       </div>
       <div className="main">
-        <RankingView data={data} />
+        <RankingView data={{ ...data, host: '' }} />
       </div>
     </Root>
   );

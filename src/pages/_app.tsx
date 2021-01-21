@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { AppContext, AppProps } from 'next/app';
 import theme from '../styles/theme';
 import { Global, Root, View } from './_app.styled';
-import { setOptions, createCache, getDataFromTree } from './../libs/useFetch';
+import { setOptions, createCache, getDataFromTree } from '@react-liblary/use-fetch';
 
 const IS_SERVER = !process.browser;
 

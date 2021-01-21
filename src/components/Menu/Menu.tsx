@@ -32,6 +32,7 @@ export const Menu: FC<Props> = () => {
           [
             ['raw', '生ログデータ'],
             ['ranking', 'ランキング'],
+            ['referer', 'リファラ'],
           ].map(([key, name]) => (
             <Button
               key={key}

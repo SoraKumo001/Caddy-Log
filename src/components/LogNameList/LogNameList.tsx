@@ -13,7 +13,7 @@ import { useRouter } from 'next/router';
 
 import { LogStatType } from '../../libs/getLogStat';
 import { format } from 'date-fns';
-import { useFetch } from '../../libs/useFetch';
+import { useFetch } from '@react-liblary/use-fetch';
 
 type Props = {};
 
@@ -68,7 +68,10 @@ export const LogNameList: FC<Props> = () => {
               <StyledTableCell component="th" scope="row">
                 {row.name}
               </StyledTableCell>
-              <StyledTableCell>{format(new Date(row.time), 'yyyy/MM/dd HH:mm:ss')}</StyledTableCell>
+              <StyledTableCell>
+                {format(new Date(row.ctime), 'yyyy/MM/dd HH:mm:ss')} ～{' '}
+                {format(new Date(row.mtime), 'yyyy/MM/dd HH:mm:ss')}
+              </StyledTableCell>
               <StyledTableCell align="right">
                 {Math.ceil(row.size / 1024).toLocaleString()} KB
               </StyledTableCell>

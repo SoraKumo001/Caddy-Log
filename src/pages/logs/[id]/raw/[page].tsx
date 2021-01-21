@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import { Pager } from '../../../../components/Pager';
 import { RawView } from '../../../../components/RawView';
-import { LogResultType } from '../../../../libs/readLogData';
-import { useFetch } from '../../../../libs/useFetch';
+import { LogResultType } from '../../../../libs/getLogData';
+import { useFetch } from '@react-liblary/use-fetch';
 import { Root } from '../../../../styled/logs.styled';
 import LoopIcon from '@material-ui/icons/Loop';
 

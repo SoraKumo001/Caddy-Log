@@ -1,12 +1,17 @@
-import logFiles from '../../main.json';
 import { promises as fs } from 'fs';
+import logFiles from '../../main.json';
 
-export type LogStatType = { name: string; size: number; time: string };
+export type LogStatType = { name: string; size: number; ctime: string; mtime: string };
 
 export const getLogStat = async () =>
   await Promise.all(
     Object.entries(logFiles).map(async ([key, value]) => {
       const stat = await fs.stat(value.log);
-      return { name: key, size: stat.size, time: stat.atime.toISOString() } as LogStatType;
+      return {
+        name: key,
+        size: stat.size,
+        ctime: stat.ctime.toISOString(),
+        mtime: stat.mtime.toISOString(),
+      } as LogStatType;
     })
   );

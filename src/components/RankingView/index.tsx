@@ -1,1 +1,1 @@
-export * from "./RankingView";
+export * from './RankingView';
